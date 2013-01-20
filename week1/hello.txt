@@ -1,1 +1,5 @@
 Server IP address: 198.61.210.50
+
+Homework for week1 for Michael Meldrum
+
+MSU net ID: meldru20
