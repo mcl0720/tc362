@@ -1,0 +1,48 @@
+--Scavenger Hunt--
+Answers by: Michael Meldrum
+
+1. How many files are in /usr/bin directory?
+
+	command: ls -1 /usr/bin | wc -l
+
+	answer: 626
+
+2. Identify the server process with the highest memory usage.
+
+	command: top (used '>' for appropriate filtering)
+	
+	answer:
+
+	PID	USER      PR  NI  VIRT  RES	SHR  S %CPU %MEM    TIME+  COMMAND 
+	697	whoopsie  20  0	  622m 	251m	580  S  0.0 51.5   1:53.23 whoopsie           
+	21819	meldru20  20  0   26208 7148 	1384 S  0.0  1.4   0:01.09 bash  
+
+	Above are the two server processes with the top memory usage. Clearly the process 'whoopsie' is the highest.
+
+3. What is your server's timezone?
+
+	command: date
+
+	answer: UTC-0
+
+4. How many default groups does your Ubuntu distribution have?
+
+	command: cat /etc/group | wc -l
+
+	answer: The number output was 57. This represents all of the groups. To get the number of default groups I
+		just need to subtract the groups I added from this number. I have added 5 groups so the number of
+		default groups would be 52.
+
+5. Download, un-tar and execute the following PHP file () from the command line on your server. What is the output? Bonus: Name the sequence!
+
+	what I did: Installed and used ftp on server to get the file on my server. Un-tar'd the file with: tar -xvwf 362.tar
+			Ran the php with: php 362.php (after installing php5 on the server)
+
+	output: 0,1,1,2,3,5,8,13,21,34,55,89,144,233,377,610,987,1597,2584,4181
+		This is the Fibonacci sequence.
+
+
+
+PS. This was actually quite fun!
+
+-Mike
